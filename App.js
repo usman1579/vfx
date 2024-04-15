@@ -1,18 +1,14 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {Provider} from 'react-redux';
+import MyStack from './src/MyStack';
+import store from './src/redux/storeConfig';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello World!</Text>
-    </View>
+    <Provider store={store}>
+      <MyStack />
+    </Provider>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
