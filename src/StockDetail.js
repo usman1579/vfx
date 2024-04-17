@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import LinearBg from './components/LinearBg';
+import LinearBg from './components/LinearBg/LinearBg';
 import Header from './components/Header/Header';
 import StockChart from './components/StockChart';
 import {useDispatch, useSelector} from 'react-redux';

@@ -1,6 +1,6 @@
-import {StyleSheet, SafeAreaView, StatusBar, Platform} from 'react-native';
 import React from 'react';
-import colors from '../constant/colors';
+import {StyleSheet, SafeAreaView, StatusBar, Platform} from 'react-native';
+import colors from '../../constant/colors';
 
 const STATUSBAR_HEIGHT = StatusBar.currentHeight;
 const APPBAR_HEIGHT = Platform.OS === 'ios' ? 44 : 56;

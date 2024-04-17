@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import colors from '../constant/colors';
+import colors from '../../constant/colors';
 
 const LinearBg = ({children}) => {
   return (

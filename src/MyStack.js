@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import MainScreen from './MainScreen';
 import StockDetail from './StockDetail';
-import MyStatusBar from './components/MyStatusBar';
+import MyStatusBar from './components/MyStatusBar/MyStatusBar';
 import colors from './constant/colors';
 
 const Stack = createNativeStackNavigator();

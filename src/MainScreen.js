@@ -1,5 +1,5 @@
 import React from 'react';
-import LinearBg from './components/LinearBg';
+import LinearBg from './components/LinearBg/LinearBg';
 import Search from './Search';
 import StockNews from './StockNews';
 
