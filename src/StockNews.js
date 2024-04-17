@@ -2,7 +2,7 @@ import React, {useMemo, useEffect, useCallback} from 'react';
 import {View, Text, FlatList, Image, StyleSheet} from 'react-native';
 import colors from './constant/colors';
 import {useDispatch, useSelector} from 'react-redux';
-import Loader from './components/Loader';
+import Loader from './components/Loader/Loader';
 import {fetchNewsData} from './redux/apiThunks';
 import {STOCK_NEWS} from './constant/language';
 

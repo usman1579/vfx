@@ -1,7 +1,7 @@
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
 import React from 'react';
-import {screenHeight} from '../constant/dimensions';
-import colors from '../constant/colors';
+import {screenHeight} from '../../constant/dimensions';
+import colors from '../../constant/colors';
 
 const Loader = ({loading}) => {
   return (

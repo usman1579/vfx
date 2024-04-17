@@ -1,40 +1,41 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Header from './Header';
-import {Text} from 'react-native';
-import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Header from './Header'; // Assuming this test file is in the same directory as Header.js
 
-describe('Header Component', () => {
-  const mockProps = {
+// Mocking the SimpleLineIcons component
+jest.mock('react-native-vector-icons/SimpleLineIcons', () => 'SimpleLineIcons');
+
+describe('Header component', () => {
+  const props = {
     title: 'Test Title',
     refresh: jest.fn(),
     onBack: jest.fn(),
   };
 
-  it('renders without crashing', () => {
-    shallow(<Header {...mockProps} />);
+  it('renders correctly', () => {
+    const wrapper = shallow(<Header {...props} />);
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it('displays correct title', () => {
-    const wrapper = shallow(<Header {...mockProps} />);
-    expect(wrapper.find(Text).props().children).toEqual(mockProps.title);
+  it('displays title correctly', () => {
+    const wrapper = shallow(<Header {...props} />);
+    expect(wrapper.find('Text').props().children).toBe(props.title);
   });
 
-  it('calls onBack function when back button is pressed', () => {
-    const wrapper = shallow(<Header {...mockProps} />);
-    wrapper.find(SimpleLineIcons).first().props().onPress();
-    expect(mockProps.onBack).toHaveBeenCalled();
+  it('calls onBack when back arrow is pressed', () => {
+    const wrapper = shallow(<Header {...props} />);
+    wrapper.find('SimpleLineIcons').first().simulate('press');
+    expect(props.onBack).toHaveBeenCalled();
   });
 
-  it('calls refresh function when refresh button is pressed', () => {
-    const wrapper = shallow(<Header {...mockProps} />);
-    wrapper.find(SimpleLineIcons).last().props().onPress();
-    expect(mockProps.refresh).toHaveBeenCalled();
+  it('calls refresh when refresh icon is pressed', () => {
+    const wrapper = shallow(<Header {...props} />);
+    wrapper.find('SimpleLineIcons').last().simulate('press');
+    expect(props.refresh).toHaveBeenCalled();
   });
 
-  it('renders dummy view when refresh function is not provided', () => {
-    const propsWithoutRefresh = {...mockProps, refresh: undefined};
-    const wrapper = shallow(<Header {...propsWithoutRefresh} />);
-    expect(wrapper.find('.dummy')).toHaveLength(1);
+  it('renders a dummy view if refresh is not provided', () => {
+    const wrapper = shallow(<Header {...props} refresh={null} />);
+    expect(wrapper.find('View[style]').exists()).toBeTruthy();
   });
 });

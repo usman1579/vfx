@@ -3,7 +3,7 @@ import LinearBg from './components/LinearBg';
 import Header from './components/Header/Header';
 import StockChart from './components/StockChart';
 import {useDispatch, useSelector} from 'react-redux';
-import Loader from './components/Loader';
+import Loader from './components/Loader/Loader';
 import {fetchMonthlyRatings} from './redux/apiThunks';
 
 const StockDetail = ({navigation, route}) => {
