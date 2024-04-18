@@ -28,7 +28,6 @@ build/
 .idea
 .gradle
 local.properties
-.env
 *.iml
 *.hprof
 .cxx/
@@ -40,6 +39,9 @@ local.properties
 node_modules/
 npm-debug.log
 yarn-error.log
+
+# .env
+.env
 
 # fastlane
 #
