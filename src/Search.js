@@ -28,7 +28,7 @@ const Search = () => {
       dispatch(fetchSearchResults(searchText));
     }, 1000);
     return () => clearTimeout(timeoutId);
-  });
+  }, [searchText, dispatch]);
 
   const goToRateScreen = item => {
     navigation.navigate('StockDetail', {tickerSymbol: item['1. symbol']});
