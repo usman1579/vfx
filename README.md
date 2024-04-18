@@ -34,6 +34,9 @@ enzymes
 jest
 
 
+NOTE : 
+API_KEY is free which is limited to 25 hits per day so i use mock data to show the results.
+
 
 
 
