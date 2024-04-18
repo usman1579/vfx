@@ -10,10 +10,10 @@ import {
 import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-import Helper from './helper';
-import colors from './constant/colors';
-import {fetchSearchResults} from './redux/apiThunks';
-import {setSearch} from './redux/apiSlice';
+import Helper from '../helper';
+import colors from '../constant/colors';
+import {fetchSearchResults} from '../redux/apiThunks';
+import {setSearch} from '../redux/apiSlice';
 import {useNavigation} from '@react-navigation/core';
 
 const Search = () => {

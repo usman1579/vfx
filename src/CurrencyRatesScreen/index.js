@@ -5,15 +5,15 @@ import {
   Loader,
   StockChart,
   TimePeriodDropdown,
-} from './components';
+} from '../components';
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View} from 'react-native';
-import {setIsOpen, setIsOpenTwo} from './redux/dataSlice';
+import {setIsOpen, setIsOpenTwo} from '../redux/dataSlice';
 import {useDispatch, useSelector} from 'react-redux';
 
 import Octicons from 'react-native-vector-icons/Octicons';
-import colors from './constant/colors';
-import {fetchLiveRatings} from './redux/apiThunks';
+import colors from '../constant/colors';
+import {fetchLiveRatings} from '../redux/apiThunks';
 
 const CurrencyRatesScreen = ({navigation}) => {
   const [baseCurrency, setBaseCurrency] = useState('USD');
@@ -22,8 +22,6 @@ const CurrencyRatesScreen = ({navigation}) => {
   const isOpen = useSelector(state => state.data.isOpen);
   const isOpenTwo = useSelector(state => state.data.isOpenTwo);
   const ratesData = useSelector(state => state.api.liveRates);
-
-  console.log(' ---- ratesData ---- ', ratesData);
   const loading = useSelector(state => state.api.ratesLoading);
   const dispatch = useDispatch();
 

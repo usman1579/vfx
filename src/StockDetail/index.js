@@ -1,8 +1,8 @@
-import {Header, LinearBg, Loader, StockChart} from './components';
+import {Header, LinearBg, Loader, StockChart} from '../components';
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {fetchMonthlyRatings} from './redux/apiThunks';
+import {fetchMonthlyRatings} from '../redux/apiThunks';
 
 const StockDetail = ({navigation, route}) => {
   const {

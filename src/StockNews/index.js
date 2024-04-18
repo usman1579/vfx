@@ -2,10 +2,10 @@ import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
 import React, {useCallback, useEffect, useMemo} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
-import {Loader} from './components';
-import {STOCK_NEWS} from './constant/language';
-import colors from './constant/colors';
-import {fetchNewsData} from './redux/apiThunks';
+import {Loader} from '../components';
+import {STOCK_NEWS} from '../constant/language';
+import colors from '../constant/colors';
+import {fetchNewsData} from '../redux/apiThunks';
 
 const NewsItem = ({
   title,

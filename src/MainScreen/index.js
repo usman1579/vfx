@@ -1,8 +1,8 @@
-import {FloatingButton, LinearBg} from './components';
+import {FloatingButton, LinearBg} from '../components';
 
 import React from 'react';
-import Search from './Search';
-import StockNews from './StockNews';
+import Search from '../Search';
+import StockNews from '../StockNews';
 
 const MainScreen = ({navigation}) => {
   const onPress = () => navigation.navigate('CurrencyRate');
