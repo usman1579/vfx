@@ -1,9 +1,10 @@
-import {images} from './assets/images';
 import {
   mock_fx_daily_res,
   mock_fx_monthly_res,
   mock_fx_weekly_res,
 } from './constant/mock';
+
+import {images} from './assets/images';
 
 const extractKeyStatistics = (data, period) => {
   const monthlyTimeSeries = data[`${period}`];

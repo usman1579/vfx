@@ -1,9 +1,10 @@
 import {ActivityIndicator, StyleSheet, View} from 'react-native';
-import React from 'react';
-import {screenHeight} from '../../constant/dimensions';
-import colors from '../../constant/colors';
 
-const Loader = ({loading}) => {
+import React from 'react';
+import colors from '../../constant/colors';
+import {screenHeight} from '../../constant/dimensions';
+
+export const Loader = ({loading}) => {
   return (
     <>
       {loading ? (
@@ -14,8 +15,6 @@ const Loader = ({loading}) => {
     </>
   );
 };
-
-export default Loader;
 
 const styles = StyleSheet.create({
   loadStyle: {

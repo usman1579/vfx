@@ -1,10 +1,12 @@
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import CurrencyRatesScreen from './CurrencyRatesScreen';
 import MainScreen from './MainScreen';
+import {MyStatusBar} from './components';
+import {NavigationContainer} from '@react-navigation/native';
 import StockDetail from './StockDetail';
-import MyStatusBar from './components/MyStatusBar/MyStatusBar';
 import colors from './constant/colors';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +20,7 @@ const MyStack = () => {
         }}>
         <Stack.Screen name="Main" component={MainScreen} />
         <Stack.Screen name="StockDetail" component={StockDetail} />
+        <Stack.Screen name="CurrencyRate" component={CurrencyRatesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

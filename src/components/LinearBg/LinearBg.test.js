@@ -1,7 +1,7 @@
+import {LinearBg} from '.'; // Assuming this test file is in the same directory as LinearBg.js
 import React from 'react';
 import {Text} from 'react-native';
 import {shallow} from 'enzyme';
-import LinearBg from './LinearBg'; // Assuming this test file is in the same directory as LinearBg.js
 
 // Mocking colors from '../../constant/colors'
 jest.mock('../../constant/colors', () => ({

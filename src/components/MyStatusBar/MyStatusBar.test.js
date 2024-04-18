@@ -1,7 +1,9 @@
+// import MyStatusBar from './'; // Import the MyStatusBar component
+import {SafeAreaView, StatusBar} from 'react-native';
+
+import {MyStatusBar} from '.';
 import React from 'react';
 import {shallow} from 'enzyme';
-import MyStatusBar from './MyStatusBar'; // Import the MyStatusBar component
-import {SafeAreaView, StatusBar} from 'react-native';
 
 // Mock the necessary constants
 jest.mock('../../constant/colors', () => ({

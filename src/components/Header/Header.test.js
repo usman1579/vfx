@@ -1,6 +1,6 @@
+import {Header} from '.';
 import React from 'react';
 import {shallow} from 'enzyme';
-import Header from './Header'; // Assuming this test file is in the same directory as Header.js
 
 // Mocking the SimpleLineIcons component
 jest.mock('react-native-vector-icons/SimpleLineIcons', () => 'SimpleLineIcons');

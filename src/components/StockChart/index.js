@@ -1,10 +1,11 @@
-import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {LineChart} from 'react-native-chart-kit';
-import colors from '../constant/colors';
-import Helper from '../helper';
 
-const StockChart = ({dates, keyStats, closingPrices}) => {
+import Helper from '../../helper';
+import {LineChart} from 'react-native-chart-kit';
+import React from 'react';
+import colors from '../../constant/colors';
+
+export const StockChart = ({dates, keyStats, closingPrices}) => {
   let labels = Helper.formattedDates(dates)?.slice(0, 7)?.reverse();
   return (
     <View style={styles.chartContainer}>
@@ -59,5 +60,3 @@ const styles = StyleSheet.create({
   label: {fontWeight: 'bold', color: colors.font},
   heading: {margin: 10, fontWeight: 'bold', color: colors.font},
 });
-
-export default StockChart;

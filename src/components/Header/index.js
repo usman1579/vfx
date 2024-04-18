@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
+
 import React from 'react';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import colors from '../../constant/colors';
 
-const Header = ({title, refresh, onBack}) => {
+export const Header = ({title, refresh, onBack}) => {
   return (
     <View style={styles.header}>
       <SimpleLineIcons
@@ -26,8 +27,6 @@ const Header = ({title, refresh, onBack}) => {
     </View>
   );
 };
-
-export default Header;
 
 const styles = StyleSheet.create({
   header: {

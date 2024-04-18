@@ -1,19 +1,20 @@
-import React, {useState, useEffect, useRef} from 'react';
 import {
-  View,
+  FlatList,
+  Image,
+  StyleSheet,
   Text,
   TextInput,
-  FlatList,
   TouchableOpacity,
-  StyleSheet,
-  Image,
+  View,
 } from 'react-native';
-import {useNavigation} from '@react-navigation/core';
-import colors from './constant/colors';
-import Helper from './helper';
-import {fetchSearchResults} from './redux/apiThunks';
+import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
+
+import Helper from './helper';
+import colors from './constant/colors';
+import {fetchSearchResults} from './redux/apiThunks';
 import {setSearch} from './redux/apiSlice';
+import {useNavigation} from '@react-navigation/core';
 
 const Search = () => {
   const [searchText, setSearchText] = useState('');

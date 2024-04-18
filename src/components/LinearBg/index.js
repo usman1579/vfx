@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import colors from '../../constant/colors';
 
-const LinearBg = ({children}) => {
+export const LinearBg = ({children}) => {
   return (
     <LinearGradient
       colors={[colors.bg1, colors.bg2]}
@@ -21,4 +21,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default LinearBg;

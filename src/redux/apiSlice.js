@@ -1,11 +1,17 @@
-import {createSlice} from '@reduxjs/toolkit';
 import {
+  fetchLiveRatings,
   fetchMonthlyRatings,
   fetchNewsData,
   fetchSearchResults,
 } from './apiThunks';
 
+import {createSlice} from '@reduxjs/toolkit';
+
 const initialState = {
+  liveRates: null,
+  ratesLoading: false,
+  ratesError: null,
+
   searchResults: [],
   searchLoading: false,
   searchError: null,
@@ -32,6 +38,18 @@ const apiSlice = createSlice({
   },
   extraReducers: builder => {
     builder
+      .addCase(fetchLiveRatings.pending, state => {
+        state.ratesLoading = true;
+        state.ratesError = null;
+      })
+      .addCase(fetchLiveRatings.fulfilled, (state, action) => {
+        state.ratesLoading = false;
+        state.liveRates = action.payload;
+      })
+      .addCase(fetchLiveRatings.rejected, (state, action) => {
+        state.ratesLoading = false;
+        state.ratesError = action.error.message;
+      })
       // cases for fetchSearchResults
       .addCase(fetchSearchResults.pending, state => {
         state.searchLoading = true;

@@ -1,7 +1,7 @@
+import {Loader} from '.'; // Assuming this test file is in the same directory as Loader.js
 import React from 'react';
-import {shallow} from 'enzyme';
-import Loader from './Loader'; // Assuming this test file is in the same directory as Loader.js
 import colors from '../../constant/colors'; // Assuming the actual import path
+import {shallow} from 'enzyme';
 
 // Mocking screenHeight from '../../constant/dimensions'
 jest.mock('../../constant/dimensions', () => ({
