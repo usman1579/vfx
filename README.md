@@ -21,6 +21,17 @@ explain why you use them.
 
 • We prefer small commits with good descriptions instead of huge commits : Implement Small Commits on Github.
 
+Third party Used :
+axio 
+react-native-chart-kit (To Chart UI)
+react-native-config    (For sensitive Data)
+react-native-vector-icons (to SHow icons)
+
+
+For Unit Test :
+@testing-library/react-native
+enzymes
+jest
 
 
 
