@@ -1,3 +1,27 @@
+VFX - Mobile developer Challenge - React Native
+
+TASk :
+
+• You should code in React Native : DONE
+
+• Feel free to use the best architecture that you think fits this kind of project :
+Approach Used Component Base
+
+• Use Redux for state management : Yes USED ReduxUIKit to manage global state managment and thunk as a middleware to access third party APIs.
+
+• You should handle the error and no data cases in a proper way : Handle All the Errors.
+
+• Use your imagination to implement a good UI/UX experience for the user.
+Try to implement Simple and clear UI and easy to use
+
+• You are free to use 3rd party libraries as you see fit. However it is expected from you to
+explain why you use them.
+
+• Unit tests are mandatory : UNIT TEST for Componets Completed
+
+• We prefer small commits with good descriptions instead of huge commits : Implement Small Commits on Github.
+
+
 
 
 
@@ -6,7 +30,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
 
