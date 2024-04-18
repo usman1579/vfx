@@ -32,10 +32,13 @@ export const StockChart = ({dates, keyStats, closingPrices}) => {
         bezier
       />
       <Text style={styles.heading}>Key Statistics</Text>
-      <Stats label="Lowest Closing Price" val={keyStats.lowestClosingPrice} />
-      <Stats label="Highest Closing Price" val={keyStats.highestClosingPrice} />
-      <Stats label="Avg. Closing Price" val={keyStats.averageClosingPrice} />
-      <Stats label="Total Volume" val={keyStats.totalVolume} />
+      <Stats label="Lowest Closing Price" val={keyStats?.lowestClosingPrice} />
+      <Stats
+        label="Highest Closing Price"
+        val={keyStats?.highestClosingPrice}
+      />
+      <Stats label="Avg. Closing Price" val={keyStats?.averageClosingPrice} />
+      <Stats label="Total Volume" val={keyStats?.totalVolume} />
     </View>
   );
 };

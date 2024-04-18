@@ -4,8 +4,15 @@ import React from 'react';
 
 export const DropdownModal = ({modalVisible, close, content}) => {
   return (
-    <Modal animationType="fade" transparent={true} visible={modalVisible}>
-      <Pressable style={styles.centeredView} onPress={close}>
+    <Modal
+      testID="modal"
+      animationType="fade"
+      transparent={true}
+      visible={modalVisible}>
+      <Pressable
+        testID="modal-pressable"
+        style={styles.centeredView}
+        onPress={close}>
         {content}
       </Pressable>
     </Modal>

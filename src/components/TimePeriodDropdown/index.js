@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 
-import { DropdownModal } from '..';
+import {DropdownModal} from '..';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import colors from '../../constant/colors';
 
@@ -29,7 +29,10 @@ export const TimePeriodDropdown = ({selectedPeriod, onPeriodChange}) => {
 
   return (
     <View style={styles.dropdownContainer}>
-      <Pressable style={styles.dropdown} onPress={() => setIsOpen(!isOpen)}>
+      <Pressable
+        testID="dropdown-list"
+        style={styles.dropdown}
+        onPress={() => setIsOpen(!isOpen)}>
         <Text style={styles.text}>{selectedPeriod}</Text>
         <SimpleLineIcons
           name={isOpen ? 'arrow-up' : 'arrow-down'}

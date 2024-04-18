@@ -43,6 +43,7 @@ export const CurrencyDropdown = ({
 
   return (
     <Pressable
+      testID="dropdown-pressable"
       onPress={() => setIsOpen(!isOpen)}
       style={styles.dropdownContainer}>
       <Image
